@@ -91,7 +91,16 @@ for i in range(1, len(data) + 1):
     table[i, 1].set_text_props(ha='right')
     table[i, 2].set_text_props(ha='left')
 
-out = "./"
+out = "./table.png"
 fig.savefig(out, dpi=dpi, pad_inches=0, facecolor='white')
 print(f"Saved to {out}")
 print(f"Fig size: {fig_width:.1f} x {fig_height:.1f} inches")
+
+# Generate markdown table
+md_out = "./table.md"
+with open(md_out, 'w') as f:
+    f.write("| " + " | ".join(col_labels) + " |\n")
+    f.write("| " + " | ".join("---" for _ in col_labels) + " |\n")
+    for row in data:
+        f.write("| " + " | ".join(row) + " |\n")
+print(f"Saved to {md_out}")
