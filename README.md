@@ -16,7 +16,7 @@ is very different from the ASCII table you see on Claude Code console.
 
 ## Example:
 
-'
+```commandline
 File,Lines,Role
 app.py,"2,450",Main application entry point and route definitions
 models.py,"1,870",Database models and schema definitions
@@ -32,7 +32,8 @@ tasks.py,365,Background task queue and scheduling
 migrations.py,310,Database migration scripts and helpers
 handlers.py,275,Event handlers and callback registry
 constants.py,150,Application-wide constants and enums
-'
+```
+
 ## Result:
 ![table](table.png)
 
